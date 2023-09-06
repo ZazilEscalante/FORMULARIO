@@ -1,0 +1,5 @@
+CREATE TABLE usuario(id usuario 
+INTO AUTO_INCREMENT PRIMARY KEY, 
+nombre VARCHAR(150), 
+email VARCHAR (50), 
+tel VARCHAR(10), );
