@@ -1,10 +1,20 @@
 <?php
 
-print_r ($_POST);
+//print_r ($_POST);
+
+require(´../Connection/connection.php');
+
 
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
-$tel = $_POST['telefono'];
+$telefono = $_POST['telefono'];
 
-print("<br>Nombre de usuario:" . $nombre . "email:" . $email . "tel: " . $telefono);
+$query = "INSERT INTO usuario(nombre,email,tel) VALUES ('$nombre','$email', '$telefono')";
+
+$ejecutar = mysqli_query($connection, $query);
+
+header("location: ../index.html");
+
+
+//print("<br>Nombre de usuario:" . $nombre . "email:" . $email . "tel: " . $telefono);
 ?>
